@@ -1,0 +1,38 @@
+.app-wrapper {
+  margin: 0 auto;
+  display: grid;
+  width: 1200px;
+  grid-template-areas:
+    "header header header"
+    "nav content content"
+    "friend content content";
+  grid-template-rows: 80px 1fr;
+  grid-template-columns: 2fr 10fr;
+  grid-gap: 10px;
+}
+
+.header-container{
+  grid-area: header;
+  background-color: purple;
+}
+
+.nav-container{
+  grid-area: nav;
+  background-color: green;
+  color: #FFFFFF;
+  font-size: 20px;
+}
+
+.content-container{
+  grid-area: content;
+  background-color: aqua;
+}
+
+.app-wrapper-content {
+  background-color: #ece5c7;
+  grid-area: content;
+}
+.contentIMG {
+  width: 995px;
+  height: 300px;
+}
