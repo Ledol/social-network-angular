@@ -1,3 +1,11 @@
 .new-post{
 margin-bottom: 40px;
 }
+
+.post-block{
+  padding-bottom: 10px
+}
+
+.posts{
+  margin-top: 10px;
+}

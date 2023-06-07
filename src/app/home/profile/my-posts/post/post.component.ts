@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {Posts} from '../../../../services/profile.service';
 
 @Component({
   selector: 'app-post',
@@ -7,6 +8,6 @@ import {Component, Input} from '@angular/core';
 })
 export class PostComponent {
 
-  @Input() message!: string
+  @Input() postsData!: Posts[]
 
 }

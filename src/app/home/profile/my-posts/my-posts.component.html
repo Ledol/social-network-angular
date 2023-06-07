@@ -1,16 +1,18 @@
-<div>
-  My Posts
+<div class="post-block">
+  <h3>My Posts</h3>
   <div class="new-post">
     <mat-form-field class="example-full-width">
       <mat-label>New message</mat-label>
       <input matInput #message maxlength="256" placeholder="Yo! Where are you...">
-      <mat-hint align="start"><strong>Don't disclose personal info</strong> </mat-hint>
+      <mat-hint align="start"><strong>Don't disclose personal info</strong></mat-hint>
       <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
     </mat-form-field>
     <button mat-mini-fab color="primary" aria-label="Example icon button with a plus one icon">
       <mat-icon>plus_one</mat-icon>
     </button>
   </div>
-<app-post [message]="'Hello, how are you'"></app-post>
-<app-post [message]="'I\'\m fine, thanks!'"></app-post>
+  <div class="posts" >
+    <app-post [postsData]="postsData"></app-post>
+  </div>
+
 </div>
