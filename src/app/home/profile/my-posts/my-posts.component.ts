@@ -7,12 +7,17 @@ import {Posts, ProfileService} from '../../../services/profile.service';
   styleUrls: ['./my-posts.component.css']
 })
 export class MyPostsComponent implements OnInit{
-  postsData:Posts[] = []
+  postsData!: Posts[]
+  newPost = ''
 
-  constructor(private pialogsService:ProfileService) {
+  constructor(private profileService:ProfileService) {
   }
   ngOnInit(): void {
-    this.postsData = this.pialogsService.postsData$
+    this.postsData = this.profileService.getPosts()
   }
 
+  addPost() {
+    this.profileService.addPost(this.newPost)
+    this.newPost = ''
+  }
 }

@@ -17,6 +17,7 @@ import {AppRoutingModule} from './app-routing.module';
 import { SettingComponent } from './home/setting/setting.component';
 import {DialogsModule} from './home/dialogs/dialogs.module';
 import { ProfileInfoComponent } from './home/profile/profile-info/profile-info.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,17 +31,18 @@ import { ProfileInfoComponent } from './home/profile/profile-info/profile-info.c
     SettingComponent,
     ProfileInfoComponent
   ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    MatSlideToggleModule,
-    MatIconModule,
-    MatButtonModule,
-    MatFormFieldModule,
-    MatInputModule,
-    AppRoutingModule,
-    DialogsModule
-  ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        MatSlideToggleModule,
+        MatIconModule,
+        MatButtonModule,
+        MatFormFieldModule,
+        MatInputModule,
+        AppRoutingModule,
+        DialogsModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

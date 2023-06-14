@@ -10,12 +10,18 @@ export class DialogsComponent implements OnInit{
 
   dialogsData:Dialog[] = []
   messagesData:Message[] = []
+
+  newMessage=''
   constructor(private dialogsService:DialogsService) {
   }
 
   ngOnInit(): void {
-    this.dialogsData = this.dialogsService.dialogsData$
-    this.messagesData = this.dialogsService.messagesData$
+    this.dialogsData = this.dialogsService.getDialogs()
+    this.messagesData = this.dialogsService.getMessages()
   }
 
+  addMessage() {
+    this.dialogsService.addMessage(this.newMessage)
+    this.newMessage = ''
+  }
 }

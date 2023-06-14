@@ -1,9 +1,14 @@
 <div class="dialogs">
+
   <div class="dialogs-items">
     <app-dialog-item [dialogsData]="dialogsData" ></app-dialog-item>
   </div>
   <div class="messages">
     <app-message [messagesData]="messagesData"></app-message>
+  </div>
+  <div>
+    <textarea [(ngModel)]="newMessage"></textarea>
+    <button (click)="addMessage()">New Message</button>
   </div>
 </div>
 <router-outlet></router-outlet>
